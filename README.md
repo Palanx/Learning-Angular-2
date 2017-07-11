@@ -18,6 +18,7 @@
 >>+ ng new SPA
 >>+ cd SPA
 >>+ ng serve
+>>+ (Si le pide instalar los modulos use **npm install** y **npm install --only=dev**)
 >
 >>+ **ng generate component [Path]** o **np g c [Path]** para generar componentes con AngularCLI (la raiz es la carpeta **./src/app**)
 >>+ **Agregar Bootstrap local:**
