@@ -8,8 +8,9 @@
       <h4 class="card-title">{{ heroe.nombre }}</h4>
       <p class="card-text">{{ heroe.bio }}</p>
       <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
-      <!-- <button type="button" class="btn btn-outline-primary btn-block"> ver más...</button> -->
-      <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Ver más link...</a>
+      <button type="button" (click)="verHeroe(i)"
+       class="btn btn-outline-primary btn-block"> ver más...</button>
+      <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Ver más link...</a> -->
     </div>
   </div>
 </div>
