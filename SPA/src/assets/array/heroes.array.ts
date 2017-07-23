@@ -1,4 +1,4 @@
-import { Heroe } from './services.heroes.service';
+import { Heroe } from 'app/services/heroes.service';
 export const HeroesArray:Heroe[] = [
     {
       nombre: "Aquaman",
