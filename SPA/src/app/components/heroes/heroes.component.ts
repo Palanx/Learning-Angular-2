@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HeroesComponent implements OnInit {
   heroes:Heroe[] = [];
+  termino:string = "";
 
   constructor( private activatedRoute : ActivatedRoute,
                private _heroesService : HeroesService,
@@ -18,7 +19,8 @@ export class HeroesComponent implements OnInit {
       if(params['termino'] === undefined){
         this.heroes = this._heroesService.getHeroes();
       }else{
-        this.heroes = this._heroesService.buscarHeroes(params['termino']);
+        this.termino = params['termino'];
+        this.heroes = this._heroesService.buscarHeroes(this.termino);
       }
     });
   }

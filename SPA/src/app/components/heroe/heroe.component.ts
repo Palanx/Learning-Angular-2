@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { HeroesService, Heroe } from '../../services/heroes.service';
 
@@ -13,6 +14,7 @@ export class HeroeComponent {
 
   constructor( private activatedRoute : ActivatedRoute,
                private _heroeService : HeroesService,
+               private _location: Location,
                private router : Router
              ) {
     this.activatedRoute.params.subscribe( params =>{
@@ -21,6 +23,6 @@ export class HeroeComponent {
   }
 
   volverHeroes(){
-    this.router.navigate(['heroes']);
+    this._location.back();
   }
 }
