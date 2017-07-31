@@ -41,5 +41,9 @@
 >>+ Pipe Async
 >>+ Pipe Date
 >>+ Pipes personalizados
->>  - Capitalizar palabras y nombres
->>  - Creación de un pipe, que permite cargar recursos externos de forma segura.
+>>    - Capitalizar palabras y nombres
+>>    - Creación de un pipe, que permite cargar recursos externos de forma segura.
+>>
+>>+ **Cambiar idioma de app**:
+>>    - Importar el modulo **LOCALE_ID** de **@angular/core** en **./src/app/app.module.ts**
+>>    - Agregar en la variable **providers** el siguiente elemento: <code>{ provide: LOCALE_ID, useValue: "es" }</code>
