@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   nombre:string = "Tomás Muñiz";
 
+  nombre2:string = "tOmáS mUñIz quIRoz";
+
   arreglo:number[] = [1,2,3,4,5,6,7,8,9,10];
 
   PI:number = Math.PI;
