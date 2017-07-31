@@ -143,6 +143,19 @@
         <td> capitalizado:false </td>
         <td>{{ nombre2 | capitalizado:false }}</td>
       </tr>
+
+      <tr>
+        <th scope="row">{{ pass }}</th>
+        <td> password </td>
+        <td>{{ pass | password }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ pass }}</th>
+        <td><p> password:{{ activar }} </p><button type="button" (click)="activar = !activar" class="btn btn-outline-info btn-block">Activar/Desactivar</button>
+        </td>
+        <td>{{ pass | password:activar }}</td>
+      </tr>
     </tbody>
   </table>
 

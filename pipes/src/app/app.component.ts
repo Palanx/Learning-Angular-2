@@ -35,4 +35,7 @@ export class AppComponent {
   fecha:Date = new Date(2017,6,31);
 
   videoID:string = "4xJoVCjBUco";
+
+  pass:string = "infloglobosconelpoto";
+  activar:boolean = true;
 }
