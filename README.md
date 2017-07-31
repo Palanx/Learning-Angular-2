@@ -47,3 +47,22 @@
 >>+ **Cambiar idioma de app**:
 >>    - Importar el modulo **LOCALE_ID** de **@angular/core** en **./src/app/app.module.ts**
 >>    - Agregar en la variable **providers** el siguiente elemento: <code>{ provide: LOCALE_ID, useValue: "es" }</code>
+
+> **./SpotiApp** proyecto usando la [API de Spotify](https://developer.spotify.com/web-api/console/)
+>>+ ng new SpotiApp
+>>+ cd SpotiApp
+>>
+>>### Contenido:
+>>+ Reforzamiento de rutas y parámetros de rutas.
+>>+ Uso de carruseles del Bootstrap 4
+>>+ Uso del HTTP para obtener información
+>>+ Uso de la API de Spotify para obtener información de:
+>>    - Artistas
+>>    - Albumes
+>>    - Audio
+>>+ Trabajo sobre el manejo de data asíncrona.
+>>+ ngModel para enlazar campos de texto a variables del componente.
+>>+ Widgets de Spotify
+>>+ HTML5 audio
+>>+ Observables
+>>+ Maps
