@@ -12,8 +12,8 @@ export class HeroesService {
     return this.heroes;
   }
 
-  getHeroe( idx:number ):Heroe{
-    return this.heroes[idx];
+  getHeroe( nombre:string ):Heroe{
+    return this.heroes.find(el=>el.nombre == nombre);
   }
 
   buscarHeroes( termino:string ):Heroe[]{
