@@ -26,3 +26,20 @@
 >>   - **npm install jquery --save** es requerido por bootstrap
 >>   - **npm install tether --save** es requerido por bootstrap (Para animaciones)
 >>   - En el archivo **.angular-cli.json** en el key **"styles"** se deben agregar las rutas a los archivos .css del proyecto y en **"scripts"** se deben agregar las rutas de los scripts. las rutas de los .css y .js que se agreguen aquí se agregaran a **index.html** al momento de buildear
+
+> **./pipes** proyecto para aprender sobre pipes
+>>+ ng new pipes
+>>+ cd pipes
+>>
+>>### Contenido:
+>>+ Pipes uppercase y lowercase
+>>+ Pipe Slice
+>>+ Pice Decimal
+>>+ Pipe Percent
+>>+ Pipe Currency
+>>+ Pipe Json
+>>+ Pipe Async
+>>+ Pipe Date
+>>+ Pipes personalizados
+>>  - Capitalizar palabras y nombres
+>>  - Creación de un pipe, que permite cargar recursos externos de forma segura.
