@@ -20,12 +20,17 @@ export class SpotifyService {
             .map( res=>{
               console.log( 'Response tal cual es' );
               console.log( res );
+
               console.log( 'Castea _body como json' );
               console.log( res.json() );
+
               this.artistas = res.json().artists.items;
+
               console.log( 'Esto carga desde un servicio' );
               console.log( this.artistas );
-              return res.json().artists.items; //Si hay un suscripcion a este observables cuando llegue el response este lo devolvera (EJ: search.component.ts)
+
+              //Si hay un suscripcion a este observables cuando llegue el response este lo devolvera (EJ: search.component.ts)
+              return res.json().artists.items;
             });
   }
 
