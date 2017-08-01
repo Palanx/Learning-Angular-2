@@ -7,7 +7,7 @@ const URL_ARTISTA:string = "https://api.spotify.com/v1/artists";
 
 @Injectable()
 export class SpotifyService {
-  token:string = "BQDd4swoe6NwTawmF5ZfJACKxwhjTzILeCVEBhKh03skk8fKdrNC_B_7uTEtjN1BgvMfw4lYv_YNOnjkR0_leQ";
+  token:string = "BQCk-NUkmBiHiTRFus63Mrc-xBEhyLtlkaN27F7bbCmrS8I2k8oL545dyPl2Jg35o03cexWav8YzdePhRS5NJA";
   artistas:any[] = [];
 
   constructor( private http:Http ) { }
@@ -34,4 +34,25 @@ export class SpotifyService {
             });
   }
 
+  getArtist( id:number ){
+    let headers = new Headers();
+    headers.append( 'authorization', `Bearer ${ this.token }` );
+    let url = `${ URL_ARTISTA }/${ id }`;
+    return this.http.get( url, { headers } )
+            .map( res=>{
+              console.log( res.json() );
+              return res.json();
+            });
+  }
+
+  getTop( id:number ){
+    let headers = new Headers();
+    headers.append( 'authorization', `Bearer ${ this.token }` );
+    let url = `${ URL_ARTISTA }/${ id }/top-tracks?country=ES`;
+    return this.http.get( url, { headers } )
+            .map( res=>{
+              console.log( res.json().tracks );
+              return res.json().tracks;
+            });
+  }
 }
