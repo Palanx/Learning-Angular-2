@@ -1,3 +1,24 @@
-<p>
-  search works!
-</p>
+<div class="container top-30">
+
+  <div class="row">
+    <div class="col-md-3">
+      <label for="filtro">Buscador de artistas</label>
+      <!-- [] es para resibir data y () es para gatillar eventos entonces [()] es para gatillar un evento y escuchar la respuesta -->
+      <input [(ngModel)]="termino"
+      (keyup)="buscarArtista()"
+      type="text" id="filtro"
+      class="form-control"
+      placeholder="Buscar por artista...">
+      <hr>
+    </div>
+
+    <div class="col-md-9">
+      <ul>
+        <li *ngFor="let artista of _spotifyService.artistas">
+          {{ artista.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
