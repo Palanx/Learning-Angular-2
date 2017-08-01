@@ -74,11 +74,11 @@
 >>    - client_secret: **{ClientSecret}**
 >>    - grant_type:client_credentials
 >>
->>###Errores en nueva version de Angular2:
+>>### Errores en nueva version de Angular2:
 >>+ Para solucionar el problema de **No provider for Http** tiene que importar <code>import { HttpModule } from '@angular/http';</code> en **app.module.ts** y agregar el modulo <code>HttpModule</code> en **imports**
 >>+ Para solucionar el problema de **'ngModel' since it isn't a known property of 'input'** tiene que importar <code>import { FormsModule } from '@angular/forms';</code> en **app.module.ts** y agregar el modulo <code>FormsModule</code> en **imports**
 >>
->>##Observables vs Promises [<small>[Fuente]</small>](https://angular-2-training-book.rangle.io/handout/observables/observables_vs_promises.html)
+>>## Observables vs Promises [<small>[Fuente]</small>](https://angular-2-training-book.rangle.io/handout/observables/observables_vs_promises.html)
 >> Both **Promises** and **Observables** provide us with abstractions that help us deal with the asynchronous nature of our applications. However, there are important differences between the two:
 >>+ As seen in the example above, **Observables** can define both the setup and teardown aspects of asynchronous behavior.
 >>+ **Observables** are cancellable.
