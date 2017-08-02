@@ -26,20 +26,11 @@
     <table class="table table-hover table-inverse">
       <tbody>
         <tr *ngFor="let pista of pistas; let i = index">
-          <td class="align-middle">
-            <img [src]="pista.album.images | noimage" class="img-fluid img-circle img-50 img-list">
-          </td>
-          <td class="align-middle" width="5%">
-            <p>{{ i+1 }}</p>
+          <td class="align-middle text-center" width="5%">
+            {{ i+1 }}
           </td>
           <td class="align-middle">
-            <p>{{ pista?.name }}</p>
-          </td>
-          <td class="align-middle">
-            <audio controls>
-              <source [src]="pista.preview_url">
-                Tu navegador es muy viejo!
-            </audio>
+            <iframe [src]="pista.uri | domseguro:'https://open.spotify.com/embed?uri='" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
           </td>
         </tr>
       </tbody>

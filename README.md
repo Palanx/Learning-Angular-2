@@ -67,6 +67,8 @@
 >>+ Observables
 >>+ Maps
 >>
+>> **DatoFreak: El [(ngModel)] se puede utilizar para crear una relación entre una variable del componente y un input**
+>>
 >>### Generar Token Spotify:
 >>+ Se tiene que crear una nueva [App en Spotify](https://developer.spotify.com/my-applications/#!/applications), para tener un **{ClientID}** y **{ClientSecret}**
 >>+ Para obtener este token se tiene que hacer un POST HttpRequest a <code>https://accounts.spotify.com/api/token</code>, con un Body **x-www-form-urlencoded** los siguientes parametros:

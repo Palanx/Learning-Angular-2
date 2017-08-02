@@ -17,6 +17,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { SpotifyuriPipe } from './pipes/spotifyuri.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SpotifyuriPipe } from './pipes/spotifyuri.pipe';
     NavbarComponent,
     NoimagePipe,
     ArtistaComponent,
-    SpotifyuriPipe
+    SpotifyuriPipe,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,
