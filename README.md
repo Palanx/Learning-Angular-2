@@ -67,7 +67,7 @@
 >>+ Observables
 >>+ Maps
 >>
->> **DatoFreak: El [(ngModel)] se puede utilizar para crear una relación entre una variable del componente y un input**
+>> **"DatoFreak: El [(ngModel)] se puede utilizar para crear una relación entre una variable del componente y un input"**
 >>
 >>### Generar Token Spotify:
 >>+ Se tiene que crear una nueva [App en Spotify](https://developer.spotify.com/my-applications/#!/applications), para tener un **{ClientID}** y **{ClientSecret}**
@@ -86,3 +86,21 @@
 >>+ As seen in the example above, **Observables** can define both the setup and teardown aspects of asynchronous behavior.
 >>+ **Observables** are cancellable.
 >>+ Moreover, Observables can be retried using one of the retry operators provided by the API, such as **retry** and **retryWhen**. On the other hand, **Promises** require the caller to have access to the original function that returned the promise in order to have a retry capability.
+
+>## **./Ionic2App** proyecto que correra en Android e IOS
+>>+ npm install -g cordova ionic (Instalar ionic)
+>>+ ionic serve
+>>#### Extras:
+>>+ **localhost:{puerto}}/ionic-lab** despliega el como se ve en todos los dispositivos mobiles
+>>+ Para usar **ionic update** usar **ionic link** primero (si la app no esta linkeada a una app en nuestra cuenta de Ionic no nos dejara hacer el update)
+>>
+>>### Contenido:
+>>+ Uso del local storage guardar localmente información para nuestras aplicaciones.
+>>+ Introducción a ionic 2.
+>>+ Uso del framework de ionic 2.
+>>+ Uso de servicios que afectan el local storage.
+>>+ Uso de ionic view para desplegar nuestra aplicación
+>>+ Aprenderemos a controlar estilos usando Angular.
+>>+ Manejo de la información a través de servicios ( update, delete, insert y select ) al local storage.
+>>+ Aprenderemos a utilizar pipes impuros para realizar filtros.
+>>+ Entre otras cosas interesantes.
