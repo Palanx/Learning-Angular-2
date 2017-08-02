@@ -7,7 +7,7 @@ const URL_ARTISTA:string = "https://api.spotify.com/v1/artists";
 
 @Injectable()
 export class SpotifyService {
-  token:string = "BQCk-NUkmBiHiTRFus63Mrc-xBEhyLtlkaN27F7bbCmrS8I2k8oL545dyPl2Jg35o03cexWav8YzdePhRS5NJA";
+  token:string = "BQAU3rm5jyA3KhT3edBrurkDpbQiQ3oUIzfTB2RZgz-vK6wotSyJ23ORAtad1Rc5K97qAsL3lpz4Xuc80dC9-Q";
   artistas:any[] = [];
 
   constructor( private http:Http ) { }

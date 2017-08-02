@@ -22,8 +22,26 @@ hr{
   margin-top: 30px;
 }
 
+.img-50{
+  height: 50px;
+}
+
+.table-inverse td{
+  border-color: grey;
+}
+
 .jumbotron{
   background-color: #171717;
+}
+
+.img-list {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .img-list {
+    display: none;
+  }
 }
 
 .puntero{
@@ -51,7 +69,7 @@ hr{
 }
 
 .img-circle{
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 

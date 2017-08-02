@@ -3,7 +3,7 @@
 
 ## Tutoriales
 
-> **./quickstart** es un tutorial realizado de [QuickStart Angular2](https://angular.io/docs/ts/latest/guide/setup.html)
+>## **./quickstart** es un tutorial realizado de [QuickStart Angular2](https://angular.io/docs/ts/latest/guide/setup.html)
 >>+ git clone https://github.com/angular/quickstart.git quickstart
 >>+ cd quickstart
 >>+ npm install
@@ -14,7 +14,7 @@
 >>+ npm install zone.js@0.8.5 --save
 >>+ npm start (Tiene que ser por cmd.exe por que PowerShell cago desde el 01-06-17)
 
-> **./SPA** proyecto creado con Angular CLI, instalar [Angular CLI](https://github.com/angular/angular-cli)
+>## **./SPA** proyecto creado con Angular CLI, instalar [Angular CLI](https://github.com/angular/angular-cli)
 >>+ ng new SPA
 >>+ cd SPA
 >>+ ng serve
@@ -27,7 +27,7 @@
 >>   - **npm install tether --save** es requerido por bootstrap (Para animaciones)
 >>   - En el archivo **.angular-cli.json** en el key **"styles"** se deben agregar las rutas a los archivos .css del proyecto y en **"scripts"** se deben agregar las rutas de los scripts. las rutas de los .css y .js que se agreguen aquí se agregaran a **index.html** al momento de buildear
 
-> **./pipes** proyecto para aprender sobre pipes
+>## **./pipes** proyecto para aprender sobre pipes
 >>+ ng new pipes
 >>+ cd pipes
 >>
@@ -48,7 +48,7 @@
 >>    - Importar el modulo **LOCALE_ID** de **@angular/core** en **./src/app/app.module.ts**
 >>    - Agregar en la variable **providers** el siguiente elemento: <code>{ provide: LOCALE_ID, useValue: "es" }</code>
 
-> **./SpotiApp** proyecto usando la [API de Spotify](https://developer.spotify.com/web-api/console/)
+>## **./SpotiApp** proyecto usando la [API de Spotify](https://developer.spotify.com/web-api/console/)
 >>+ ng new SpotiApp
 >>+ cd SpotiApp
 >>
@@ -78,7 +78,8 @@
 >>+ Para solucionar el problema de **No provider for Http** tiene que importar <code>import { HttpModule } from '@angular/http';</code> en **app.module.ts** y agregar el modulo <code>HttpModule</code> en **imports**
 >>+ Para solucionar el problema de **'ngModel' since it isn't a known property of 'input'** tiene que importar <code>import { FormsModule } from '@angular/forms';</code> en **app.module.ts** y agregar el modulo <code>FormsModule</code> en **imports**
 >>
->>## Observables vs Promises [<small>[Fuente]</small>](https://angular-2-training-book.rangle.io/handout/observables/observables_vs_promises.html)
+
+>## Observables vs Promises [<small>[Fuente]</small>](https://angular-2-training-book.rangle.io/handout/observables/observables_vs_promises.html)
 >> Both **Promises** and **Observables** provide us with abstractions that help us deal with the asynchronous nature of our applications. However, there are important differences between the two:
 >>+ As seen in the example above, **Observables** can define both the setup and teardown aspects of asynchronous behavior.
 >>+ **Observables** are cancellable.
