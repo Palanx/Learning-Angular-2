@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background-color: black;
+  color: white !important;
+}
+
+hr{
+  border-color: white;
+}
+
+.h1-align {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .h1-align {
+    text-align: center;
+  }
+}
+
+.top-30{
+  margin-top: 30px;
+}
+
+.img-50{
+  height: 50px;
+}
+
+.table-inverse td{
+  border-color: grey;
+}
+
+.jumbotron{
+  background-color: #171717;
+}
+
+.img-list {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .img-list {
+    display: none;
+  }
+}
+
+.puntero{
+  cursor: pointer;
+}
+
+.carousel-item{
+  width: 100%;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media (max-width: 600px) {
+  .carousel-item {
+    height: 280px;
+  }
+}
+
+
+.main-container{
+  margin-top: 30px;
+}
+
+.img-circle{
+  border-radius: 50%;
+}
+
+
+/* Animaciones */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+/*
+ * Styles copied from the Grid example to make grid rows & columns visible.
+ */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+h4 {
+  margin-top: 25px;
+}
+.row {
+  margin-bottom: 20px;
+}
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /*background-color: #eee;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);*/
+}
