@@ -6,9 +6,11 @@ import { SpotifyService } from '../../services/spotify.service';
   templateUrl: './search.component.html'
 })
 export class SearchComponent implements OnInit {
-  termino:string = "";
 
-  constructor( private _spotifyService:SpotifyService ){
+  termino: string = "";
+  loading: boolean;
+
+  constructor(private _spotifyService: SpotifyService) {
   }
 
   ngOnInit() {/*
@@ -20,9 +22,21 @@ export class SearchComponent implements OnInit {
       } );*/
   }
 
-  buscarArtista(){
-    this._spotifyService.getArtists( this.termino )
-      .subscribe()
+  buscarArtista() {
+    this.loading = true;
+
+    this._spotifyService.getArtists(this.termino)
+      .subscribe( 
+        () => {
+          this.loading = false;
+        },
+        err => {
+          this.loading = false;
+        } );
+  }
+
+  mostrarArtista(event): void {
+    alert(event.nomArtista);
   }
 
 }

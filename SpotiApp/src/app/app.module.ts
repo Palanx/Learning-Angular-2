@@ -18,6 +18,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { SpotifyuriPipe } from './pipes/spotifyuri.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     NoimagePipe,
     ArtistaComponent,
     SpotifyuriPipe,
-    DomseguroPipe
+    DomseguroPipe,
+    TarjetaComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

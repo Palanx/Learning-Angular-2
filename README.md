@@ -71,6 +71,7 @@
 >>
 >>### Generar Token Spotify:
 >>+ Se tiene que crear una nueva [App en Spotify](https://developer.spotify.com/my-applications/#!/applications), para tener un **{ClientID}** y **{ClientSecret}**
+>>+ Hay un problema si se intenta obtener el token desde un cliente que no es Postman, Postman emula un server por lo cual se monto un server en https://spotify-get-token.herokuapp.com/spotify/clientid/secret [Repo](https://github.com/Klerith/spotify-get-token) el cual devuelve el token para poder ser obtenido de forma automatica desde la app Angular.
 >>+ Para obtener este token se tiene que hacer un POST HttpRequest a <code>https://accounts.spotify.com/api/token</code>, con un Body **x-www-form-urlencoded** los siguientes parametros:
 >>    - client_id: **{ClientID}**
 >>    - client_secret: **{ClientSecret}**
