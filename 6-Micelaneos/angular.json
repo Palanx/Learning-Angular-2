@@ -29,7 +29,7 @@
             ],
             "scripts": [
               "src/assets/jquery-v3.3.1s/js/jquery-3.3.1.slim.min.js",
-              "src/assets/tether-v1.3.3/js/tether.js",
+              "src/assets/popper-v1.14.3/js/popper.min.js",
               "src/assets/bootstrap-v4.1.1/js/bootstrap.min.js"
             ]
           },
