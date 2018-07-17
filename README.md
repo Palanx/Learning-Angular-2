@@ -157,4 +157,5 @@ Proyecto para explicar cosas random.
 + ngStyle
 + Css que solo afecta un Component
 + ngClass
++ Procesos async con indicadores de usuario
 <hr>

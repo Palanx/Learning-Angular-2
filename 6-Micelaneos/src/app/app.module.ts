@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { CssComponent } from './components/css/css.component';
 import { ClasesComponent } from './components/clases/clases.component';
+import { AsyncComponent } from './components/async/async.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgStyleComponent,
     CssComponent,
-    ClasesComponent
+    ClasesComponent,
+    AsyncComponent
   ],
   imports: [
     BrowserModule
