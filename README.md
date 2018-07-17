@@ -153,7 +153,8 @@ ionic serve
 Proyecto para explicar cosas random.
 
 ### Contenido:
-+ [style.{clase}.{unidad-medida}]="{condición}"
-+ [ngStyle]="{objeto}"
++ style.{clase}.{unidad}
++ ngStyle
 + Css que solo afecta un Component
++ ngClass
 <hr>
