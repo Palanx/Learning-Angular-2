@@ -148,3 +148,12 @@ ionic serve
 + Aprenderemos a utilizar pipes impuros para realizar filtros.
 + Entre otras cosas interesantes.
 <hr>
+
+## 6. Micelaneos
+Proyecto para explicar cosas random.
+
+### Contenido:
++ [style.{clase}.{unidad-medida}]="{condición}"
++ [ngStyle]="{objeto}"
++ Css que solo afecta un Component
+<hr>
