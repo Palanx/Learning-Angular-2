@@ -6,6 +6,7 @@ import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { CssComponent } from './components/css/css.component';
 import { ClasesComponent } from './components/clases/clases.component';
 import { AsyncComponent } from './components/async/async.component';
+import { ResaltadoDirective } from './directives/resaltado.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AsyncComponent } from './components/async/async.component';
     NgStyleComponent,
     CssComponent,
     ClasesComponent,
-    AsyncComponent
+    AsyncComponent,
+    ResaltadoDirective
   ],
   imports: [
     BrowserModule
