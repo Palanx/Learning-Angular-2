@@ -159,4 +159,5 @@ Proyecto para explicar cosas random.
 + ngClass
 + Procesos async con indicadores de usuario
 + Directivas personalizadas
++ ngSwitch
 <hr>
