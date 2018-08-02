@@ -160,4 +160,5 @@ Proyecto para explicar cosas random.
 + Procesos async con indicadores de usuario
 + Directivas personalizadas
 + ngSwitch
++ rutas hijas
 <hr>
