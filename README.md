@@ -161,4 +161,6 @@ Proyecto para explicar cosas random.
 + Directivas personalizadas
 + ngSwitch
 + rutas hijas
++ modulo para rutas hijas
++ obtener parametros de ruta padre
 <hr>
