@@ -163,4 +163,15 @@ Proyecto para explicar cosas random.
 + rutas hijas
 + modulo para rutas hijas
 + obtener parametros de ruta padre
++ ciclo de vida de componentes
+
+### [Ciclo de vida de componentes](https://angular.io/guide/lifecycle-hooks)
+1. `ngOnChanges` Cuando la data de propiedades relacionadas cambian.
+2. `ngOnInit` Cuando el componente esta inicializando. (Después del...)
+3. `ngDoCheck` Durante cada revisión del ciclo de detección de cambios. (Cada vez que algo pasa en pantalla)
+4. `ngAfterContentInit` Después de insertar contenido. (`<app-blabla-page>`)
+5. `ngAfterContentChecked` Después de la revisión del contenido insertado.
+6. `ngAfterViewInit` Después de la inicialización de componente/hijos.
+7. `ngAfterViewChecked` Después de cada revisión de los componentes/hijos.
+8. `ngOnDestroy` Justo antes que se destruya el componente o directiva.
 <hr>
