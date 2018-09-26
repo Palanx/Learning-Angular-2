@@ -2,7 +2,7 @@
 Repositorio dedicado a desarrollar proyectos para aprender Angular2
 
 ## 1. QuickStart
-Es un tutorial realizado de [QuickStart Angular2](https://angular.io/docs/ts/latest/guide/setup.html).
+Es un tutorial realizado de [QuickStart Angular](https://angular.io/docs/ts/latest/guide/setup.html).
 
 **Pasos a seguir:**
 ```
@@ -175,3 +175,11 @@ Proyecto para explicar cosas random.
 7. `ngAfterViewChecked` Después de cada revisión de los componentes/hijos.
 8. `ngOnDestroy` Justo antes que se destruya el componente o directiva.
 <hr>
+
+## 7. Auth0
+
+### Contenido:
+1. Autenticación con Facebook, Twitter, Google, entre otros...
+2. Crear login.
+3. Servicios para bloquear rutas si el usuario no esta autenticado.
+4. Obtener unfo del usuario autenticado. 
