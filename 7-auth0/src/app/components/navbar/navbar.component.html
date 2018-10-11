@@ -12,7 +12,7 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['precios']">Precios</a>
       </li>
-      <li class="nav-item" routerLinkActive="active">
+      <li class="nav-item" routerLinkActive="active" *ngIf="_auth0.isAuthenticated()">
         <a class="nav-link" [routerLink]="['protegida']">Protegida</a>
       </li>
     </ul>
@@ -21,8 +21,8 @@
 
     <span class="navbar-text">
       <span [ngSwitch]="_auth0.isAuthenticated()">
-        <button *ngSwitchCase="false" (click)="login()" type="button" class="btn btn-outline-primary">Login</button>
-        <button *ngSwitchCase="true" (click)="logout()" type="button" class="btn btn-outline-primary">Logout</button>
+        <button *ngSwitchCase="false" (click)="login()" type="button" class="btn btn-outline-primary btn-sm">Login</button>
+        <button *ngSwitchCase="true" (click)="logout()" type="button" class="btn btn-outline-primary btn-sm">Logout</button>
       </span>
     </span>
 
