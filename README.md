@@ -182,4 +182,19 @@ Proyecto para explicar cosas random.
 1. Autenticación con Facebook, Twitter, Google, entre otros...
 2. Crear login.
 3. Servicios para bloquear rutas si el usuario no esta autenticado.
-4. Obtener unfo del usuario autenticado. 
+4. Obtener info del usuario autenticado.
+
+## 8. Forms
+
+### Contenido:
++ Diferentes aproximaciones que tiene angular para trabajar formularios.
++ Profundizaremos en el uso del ngModel.
++ Utilizar las validaciones pre fabricadas.
++ Crear validaciones personalizadas.
++ Crear validaciones asíncronas.
++ Realizar un submit utilizando el ngSubmit.
++ Postear información únicamente cuando el formulario es valido,
++ Crear formularios del lado del componente.
++ Cargar información por defecto a los formularios.
++ Subscribirnos a los cambios de los valores de los formularios.
+
