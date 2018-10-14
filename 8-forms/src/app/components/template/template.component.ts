@@ -31,6 +31,21 @@ export class TemplateComponent{
     }
   ]
 
+  lSexo: Object[] = [
+    {
+      codigo: "m",
+      nombre: "Masculino"
+    },
+    {
+      codigo: "f",
+      nombre: "Femenino"
+    },
+    {
+      codigo: "s",
+      nombre: "Sin Definir"
+    }
+  ];
+
   constructor() { }
 
   guardar( forma: NgForm ){
