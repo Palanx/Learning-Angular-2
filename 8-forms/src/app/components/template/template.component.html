@@ -1,6 +1,6 @@
 <h4>Formularios <small>template</small></h4>
 <hr>
-<form (ngSubmit)="guardar()" novalidate><!-- 'novalidate' es para que no salgan los mensajes dee validación de HTML5 -->
+<form (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate><!-- 'novalidate' es para que no salgan los mensajes dee validación de HTML5 -->
 
   <div>
 
@@ -12,7 +12,7 @@
                type="text"
                placeholder="Nombre"
                name="nombre"
-               ngModel
+               [ngModel]="usuario.nombre"
                minlength="5"
                required>
       </div>
@@ -26,7 +26,8 @@
                type="text"
                placeholder="Apellido"
                name="apellido"
-               ngModel>
+               [ngModel]="usuario.apellido"
+               required>
       </div>
     </div>
 
@@ -40,7 +41,8 @@
              type="email"
              placeholder="Correo electrónico"
              name="correo"
-             ngModel>
+             [ngModel]="usuario.correo"
+             required>
     </div>
   </div>
 
