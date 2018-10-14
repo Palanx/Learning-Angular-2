@@ -65,17 +65,24 @@
 
   <div class="form-group row">
     <label class="col-2 col-form-label">Sexo</label>
-    <div class="col-md-8">
+    <div class="col-md-8" >
 
-      <div class="custom-control custom-radio" *ngFor="let sexo of lSexo">
+      <div class="custom-control custom-radio" *ngFor="let sex of lSexo; let last = last">
         <input class="custom-control-input"
-               id="rb{{ sexo.codigo }}"
+               [class.is-invalid]="(forma.submitted || sexo.touched) && sexo.errors?.required"
+               id="rb{{ sex.codigo }}"
                type="radio"
                name="sexo"
-               [value]="sexo.codigo"
-               [ngModel]="usuario.sexo">
-        <label class="custom-control-label" for="rb{{ sexo.codigo }}">{{ sexo.nombre }}</label>
+               [value]="sex.codigo"
+               [ngModel]="usuario.sexo"
+               #sexo="ngModel"
+               required>
+        <label class="custom-control-label" for="rb{{ sex.codigo }}">{{ sex.nombre }}</label>
+        <div *ngIf="last && sexo.errors?.required" class="invalid-feedback">
+          Este campo es requerido.
+        </div>
       </div>
+      
       <!-- <div class="custom-control custom-radio">
         <input class="custom-control-input"
                id="rbFemenino"
