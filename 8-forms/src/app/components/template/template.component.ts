@@ -11,8 +11,25 @@ export class TemplateComponent{
   usuario:Object = {
     nombre: null,
     apellido: null,
-    correo: null
+    correo: null,
+    pais: "",
+    sexo: null
   }
+
+  lPais: Object[] = [
+    {
+      codigo: "CRI",
+      nombre: "Costa Rica"
+    },
+    {
+      codigo: "ESP",
+      nombre: "España"
+    },
+    {
+      codigo: "CL",
+      nombre: "Chile"
+    }
+  ]
 
   constructor() { }
 

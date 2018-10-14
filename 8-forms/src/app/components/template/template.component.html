@@ -2,50 +2,91 @@
 <hr>
 <form (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate><!-- 'novalidate' es para que no salgan los mensajes dee validación de HTML5 -->
 
-  <div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Nombre</label>
+    <div class="col-8">
 
-    <div class="form-group row">
-      <label class="col-2 col-form-label">Nombre</label>
-      <div class="col-8">
-
-        <input class="form-control"
-               [class.is-invalid]="(forma.submitted || nombre.touched) && (nombre.errors?.required || nombre.errors?.minlength)"
-               type="text"
-               placeholder="Nombre"
-               name="nombre"
-               [ngModel]="usuario.nombre"
-               minlength="5"
-               required
-               #nombre="ngModel"> <!-- creando variable local que apunte al form.controls que angular crea para nombre -->
-        <div class="invalid-feedback">
-          <div *ngIf="nombre.errors?.required">
-            Este campo es requerido.
-          </div>
-          <div *ngIf="nombre.errors?.minlength">
-            Por lo menos {{ nombre.errors.minlength.requiredLength }} caracteres, tiene {{ nombre.errors.minlength.actualLength }} caracteres.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-2 col-form-label">Apellido</label>
-      <div class="col-8">
-
-        <input class="form-control"
-               [class.is-invalid]="(forma.submitted || apellido.touched) && apellido.errors?.required"
-               type="text"
-               placeholder="Apellido"
-               name="apellido"
-               [ngModel]="usuario.apellido"
-               required
-               #apellido="ngModel">
-        <div *ngIf="apellido.errors?.required" class="invalid-feedback">
+      <input class="form-control"
+              [class.is-invalid]="(forma.submitted || nombre.touched) && (nombre.errors?.required || nombre.errors?.minlength)"
+              type="text"
+              placeholder="Nombre"
+              name="nombre"
+              [ngModel]="usuario.nombre"
+              minlength="5"
+              required
+              #nombre="ngModel"> <!-- creando variable local que apunte al form.controls que angular crea para nombre -->
+      <div class="invalid-feedback">
+        <div *ngIf="nombre.errors?.required">
           Este campo es requerido.
         </div>
+        <div *ngIf="nombre.errors?.minlength">
+          Por lo menos {{ nombre.errors.minlength.requiredLength }} caracteres, tiene {{ nombre.errors.minlength.actualLength }} caracteres.
+        </div>
       </div>
     </div>
+  </div>
 
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Apellido</label>
+    <div class="col-8">
+
+      <input class="form-control"
+              [class.is-invalid]="(forma.submitted || apellido.touched) && apellido.errors?.required"
+              type="text"
+              placeholder="Apellido"
+              name="apellido"
+              [ngModel]="usuario.apellido"
+              required
+              #apellido="ngModel">
+      <div *ngIf="apellido.errors?.required" class="invalid-feedback">
+        Este campo es requerido.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Pais</label>
+    <div class="col-8">
+      <select class="form-control"
+              [class.is-invalid]="(forma.submitted || pais.touched) && pais.errors?.required"
+              name="pais"
+              [ngModel]="usuario.pais"
+              required
+              #pais="ngModel">
+        <option value="">Seleccione un pais</option>
+        <option *ngFor="let pais of lPais"
+                [value]="pais.codigo">{{ pais.nombre }}</option>
+      </select>
+      <div *ngIf="pais.errors?.required" class="invalid-feedback">
+        Este campo es requerido.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Sexo</label>
+    <div class="col-md-8">
+
+      <div class="custom-control custom-radio">
+        <input class="custom-control-input"
+               id="rbMasculino"
+               type="radio"
+               name="sexo"
+               value="Masculino"
+               [ngModel]="usuario.sexo">
+        <label class="custom-control-label" for="rbMasculino">Masculino</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input class="custom-control-input"
+               id="rbFemenino"
+               type="radio"
+               name="sexo"
+               value="Femenino"
+               [ngModel]="usuario.sexo">
+        <label class="custom-control-label" for="rbFemenino">Femenino</label>
+      </div>
+
+    </div>
   </div>
 
   <div class="form-group row">
@@ -77,12 +118,16 @@
   <div class="form-group row">
     <label class="col-2 col-form-label">&nbsp;</label>
     <div class="input-group col-md-8">
-      <button [disabled]="!forma.valid"
-      type="submit" class="btn btn-outline-primary">
+      <!-- [disabled]="!forma.valid" -->
+      <button type="submit" class="btn btn-outline-primary">
         Guardar
       </button>
     </div>
   </div>
 
 </form>
+
+<pre>
+  {{ forma.form.value | json }}
+</pre>
 
