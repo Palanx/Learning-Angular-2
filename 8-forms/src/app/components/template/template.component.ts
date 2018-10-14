@@ -13,7 +13,8 @@ export class TemplateComponent{
     apellido: null,
     correo: null,
     pais: "",
-    sexo: null
+    sexo: null,
+    acepta: null
   }
 
   lPais: Object[] = [

@@ -120,7 +120,28 @@
     </div>
   </div>
 
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Acepta</label>
+    <div class="col-md-8" >
 
+      <div class="custom-control custom-checkbox">
+        <input class="custom-control-input"
+                [class.is-invalid]="(forma.submitted || acepta.touched) && acepta.errors?.required"
+                type="checkbox"
+                id="cbAcepta"
+                name="acepta"
+                [ngModel]="usuario.acepta"
+                #acepta="ngModel"
+                required>
+        <label class="custom-control-label" for="cbAcepta">Acepta las condiciones</label>
+        <div *ngIf="acepta.errors?.required" class="invalid-feedback">
+          Debe aceptar los terminos y condiciones para continuar.
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
 
   <div class="form-group row">
     <label class="col-2 col-form-label">&nbsp;</label>
