@@ -9,6 +9,7 @@
       <div class="col-8">
 
         <input class="form-control"
+               [class.is-invalid]="(forma.submitted || nombre.touched) && (nombre.errors?.required || nombre.errors?.minlength)"
                type="text"
                placeholder="Nombre"
                name="nombre"
@@ -16,7 +17,7 @@
                minlength="5"
                required
                #nombre="ngModel"> <!-- creando variable local que apunte al form.controls que angular crea para nombre -->
-        <div *ngIf="nombre.touched">
+        <div class="invalid-feedback">
           <div *ngIf="nombre.errors?.required">
             Este campo es requerido.
           </div>
@@ -32,13 +33,14 @@
       <div class="col-8">
 
         <input class="form-control"
+               [class.is-invalid]="(forma.submitted || apellido.touched) && apellido.errors?.required"
                type="text"
                placeholder="Apellido"
                name="apellido"
                [ngModel]="usuario.apellido"
                required
                #apellido="ngModel">
-        <div *ngIf="apellido.touched && apellido.errors?.required">
+        <div *ngIf="apellido.errors?.required" class="invalid-feedback">
           Este campo es requerido.
         </div>
       </div>
@@ -51,6 +53,7 @@
     <div class="col-md-8">
 
       <input class="form-control"
+             [class.is-invalid]="(forma.submitted || correo.touched) && (correo.errors?.required || correo.errors?.pattern)"
              type="email"
              placeholder="Correo electrónico"
              name="correo"
@@ -58,7 +61,7 @@
              required
              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
              #correo="ngModel">
-      <div *ngIf="correo.touched">
+      <div class="invalid-feedback">
         <div *ngIf="correo.errors?.required">
           Este campo es requerido.
         </div>
