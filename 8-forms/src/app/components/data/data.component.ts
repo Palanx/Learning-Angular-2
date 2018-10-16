@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormArray, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'app-data',
@@ -32,10 +32,17 @@ export class DataComponent{
       'correo': new FormControl('', [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
       'pasatiempos': new FormArray([
         new FormControl('Correr', Validators.required)
-      ])
+      ]),
+      'password1': new FormControl('', Validators.required),
+      'password2': new FormControl()
     });
 
     //this.forma.setValue(this.usuario); //Si el objeto tiene la misma estructura que el FormGroup se setean los valores
+
+    this.forma.controls.password2.setValidators([ //Cargar validadores luego de crear el FormControl
+      Validators.required,
+      this.noIgual.bind(this.forma) // Si no se hace el bind la funcion no puede apuntar a this.forma por que esta en otro scope
+    ]);
   }
 
   agregarPasatiempo(){
@@ -48,6 +55,16 @@ export class DataComponent{
     if((control.value as string).toLowerCase() === "herrera"){
       return {
         noherrera:true
+      }
+    }
+    return null;
+  }
+
+  noIgual(control: FormControl):ValidationErrors{
+    let forma: any = this;
+    if(control.value !== forma.controls.password1.value){
+      return {
+        noigual:true
       }
     }
     return null;
