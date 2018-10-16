@@ -30,7 +30,7 @@ export class TemplateComponent{
       codigo: "CL",
       nombre: "Chile"
     }
-  ]
+  ];
 
   lSexo: Object[] = [
     {
