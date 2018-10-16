@@ -5,13 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TemplateComponent } from './components/template/template.component';
-import { DateComponent } from './components/date/date.component';
+import { DataComponent } from './components/data/data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateComponent,
-    DateComponent
+    DataComponent
   ],
   imports: [
     BrowserModule,
