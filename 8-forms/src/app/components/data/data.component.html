@@ -9,9 +9,16 @@
       <div class="col-8">
 
         <input class="form-control"
+               [class.is-invalid]="!forma.get('nombre').valid"
                type="text"
                placeholder="Nombre"
                formControlName="nombre">
+        <div *ngIf="forma.controls.nombre.errors?.required" class="invalid-feedback">
+             Este campo es requerido.
+        </div>
+        <div *ngIf="forma.controls.nombre.errors?.minlength" class="invalid-feedback">
+             Por lo menos 3 caracteres.
+        </div>
       </div>
     </div>
 
