@@ -27,7 +27,7 @@ export class DataComponent{
     this.forma = new FormGroup({
       'nombrecompleto': new FormGroup({
         'nombre': new FormControl('', [Validators.required, Validators.minLength(3)]),
-        'apellido': new FormControl('', Validators.required)
+        'apellido': new FormControl('', [Validators.required, this.noHerrera])
       }),
       'correo': new FormControl('', [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
       'pasatiempos': new FormArray([
@@ -42,6 +42,15 @@ export class DataComponent{
     (this.forma.controls.pasatiempos as FormArray).push(
       new FormControl('', Validators.required)
     );
+  }
+
+  noHerrera(control: FormControl):{[s:string]:boolean}{
+    if((control.value as string).toLowerCase() === "herrera"){
+      return {
+        noherrera:true
+      }
+    }
+    return null;
   }
 
   guardarCambios(){
