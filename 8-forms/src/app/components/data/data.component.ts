@@ -45,6 +45,27 @@ export class DataComponent{
       Validators.required,
       this.noIgual.bind(this.forma) // Si no se hace el bind la funcion no puede apuntar a this.forma por que esta en otro scope
     ]);
+
+    // Se dispara cada vez que un valor del formulario cambie, por ejemplo en un textbox se ejecuta por cada tecla que se presione
+    this.forma.valueChanges.subscribe(
+      data => {
+        console.log(data);
+      }
+    );
+
+    // Se dispara cada vez que el clontrol username sufra un cambio
+    this.forma.controls.username.valueChanges.subscribe(
+      data => {
+        console.log(data);
+      }
+    );
+
+    // Se dispara cada vez que el status del control cambia (Ej: VALID, INVALID)
+    this.forma.controls.username.statusChanges.subscribe(
+      data => {
+        console.log(data);
+      }
+    );
   }
 
   agregarPasatiempo(){
