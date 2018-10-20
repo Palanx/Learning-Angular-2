@@ -198,7 +198,8 @@ Proyecto para explicar cosas random.
 + Cargar información por defecto a los formularios.
 + Subscribirnos a los cambios de los valores de los formularios.
 
-## 9. CRUD Firebase
+## 9. HeroesApp
+App que se conecta a una API CRUD Firebase 
 
 ### Contenido:
 + Uso del modulo HTTP.
