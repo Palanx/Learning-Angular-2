@@ -198,3 +198,12 @@ Proyecto para explicar cosas random.
 + Cargar información por defecto a los formularios.
 + Subscribirnos a los cambios de los valores de los formularios.
 
+## 9. CRUD Firebase
+
+### Contenido:
++ Uso del modulo HTTP.
++ Utilizaremos los servicios restful de Firebase
++ POST.
++ GET.
++ DELETE.
++ PUT.
