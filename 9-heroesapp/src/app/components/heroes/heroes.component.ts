@@ -10,6 +10,7 @@ import { Heroe } from './heroe.component';
 export class HeroesComponent implements OnInit {
 
   lHeroe: any[] = [];
+  isLoading:boolean = true;
 
   constructor(
     private _heroes: HeroesService,
@@ -23,6 +24,7 @@ export class HeroesComponent implements OnInit {
         //   this.lHeroe.push(h);
         // }
         this.lHeroe = res;
+        this.isLoading = false;
       },
       err => {
         console.error(err);
