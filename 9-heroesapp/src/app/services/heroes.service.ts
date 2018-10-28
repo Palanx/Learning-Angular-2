@@ -64,4 +64,20 @@ export class HeroesService {
     );
 
   }
+
+  getHeroes(){
+
+    let headers = new Headers({
+      'Content-Type':'application-json'
+    });
+    let url = `${this.fireURL}.json`;
+
+    return this.http.get( url, {headers} ).pipe(
+      map( res => { 
+        console.log("get", res.json());
+        return res.json();
+      } )
+    );
+
+  }
 }

@@ -25,11 +25,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let key of lHeroe | keys; let i = index">
+            <td>{{ i+1 }}</td>
+            <td>{{ lHeroe[key].nombre }}</td>
+            <td>{{ lHeroe[key].casa }}</td>
+            <td>{{ lHeroe[key].bio }}</td>
           </tr>
         </tbody>
       </table>
