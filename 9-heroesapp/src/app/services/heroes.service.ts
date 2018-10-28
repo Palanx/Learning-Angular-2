@@ -25,7 +25,7 @@ export class HeroesService {
 
     return this.http.post( url, body, {headers} ).pipe(
       map( res => { 
-        console.log(res.json());
+        console.log("post", res.json());
         return res.json();
       } )
     );
@@ -42,7 +42,23 @@ export class HeroesService {
 
     return this.http.put( url, body, {headers} ).pipe(
       map( res => { 
-        console.log(res.json());
+        console.log("put", res.json());
+        return res.json();
+      } )
+    );
+
+  }
+
+  getHeroe( key$: string ){
+
+    let headers = new Headers({
+      'Content-Type':'application-json'
+    });
+    let url = `${this.fireURL}/${key$}.json`;
+
+    return this.http.get( url, {headers} ).pipe(
+      map( res => { 
+        console.log("get", res.json());
         return res.json();
       } )
     );

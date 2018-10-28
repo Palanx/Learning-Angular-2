@@ -37,14 +37,22 @@ export class HeroeComponent implements OnInit {
         if(params.id == 'nuevo')
           this.nuevo = true;
         else{
-          this.nuevo = false;
+          
           this.key$ = params.id;
+          if(!this.nuevo)
+            this.getHeroe();
+          this.nuevo = false;
         }
       }
     );
   }
 
   ngOnInit() {
+  }
+
+  resetForm(){
+    this.router.navigate(['/heroe', 'nuevo']);
+    this.forma.reset({ casa: 'Marvel' });
   }
 
   submit(){
@@ -54,6 +62,17 @@ export class HeroeComponent implements OnInit {
       this.nuevoHeroe();
     else
       this.actualizarHeroe();
+  }
+
+  getHeroe(){
+    this._heroe.getHeroe( this.key$ ).subscribe(
+      res => {
+        this.heroe = res as Heroe;
+      },
+      err => {
+        console.error(err);
+      }
+    );
   }
 
   nuevoHeroe(){
