@@ -27,7 +27,7 @@ export class HeroeComponent implements OnInit {
   key$: string;
 
   constructor(
-    private _heroe: HeroesService,
+    private _heroes: HeroesService,
     private router: Router,
     private activatedReoute: ActivatedRoute
   ) {
@@ -65,7 +65,7 @@ export class HeroeComponent implements OnInit {
   }
 
   getHeroe(){
-    this._heroe.getHeroe( this.key$ ).subscribe(
+    this._heroes.getHeroe( this.key$ ).subscribe(
       res => {
         this.heroe = res as Heroe;
       },
@@ -76,7 +76,7 @@ export class HeroeComponent implements OnInit {
   }
 
   nuevoHeroe(){
-    this._heroe.nuevoHeroe( this.heroe ).subscribe(
+    this._heroes.nuevoHeroe( this.heroe ).subscribe(
       res => {
         this.router.navigate(['/heroe', res.name]);
       },
@@ -87,7 +87,7 @@ export class HeroeComponent implements OnInit {
   }
 
   actualizarHeroe(){
-    this._heroe.actualizarHeroe( this.heroe, this.key$ ).subscribe(
+    this._heroes.actualizarHeroe( this.heroe, this.key$ ).subscribe(
       res => {
         console.log(res);
       },

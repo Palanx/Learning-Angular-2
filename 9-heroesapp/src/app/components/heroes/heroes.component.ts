@@ -12,7 +12,7 @@ export class HeroesComponent implements OnInit {
   lHeroe: any[] = [];
 
   constructor(
-    private _heroes: HeroesService
+    private _heroes: HeroesService,
   ) {
     this._heroes.getHeroes().subscribe(
       res => {
@@ -31,6 +31,21 @@ export class HeroesComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  eliminarHeroe(key$: string){
+    this._heroes.deleteHeroe( key$ ).subscribe(
+      res => {
+        if(!!res){
+          console.error(res);
+        }else{
+          delete this.lHeroe[key$]; //js para eliminar objetos
+        }
+      },
+      err => {
+        console.error(err);
+      }
+    );
   }
 
 }

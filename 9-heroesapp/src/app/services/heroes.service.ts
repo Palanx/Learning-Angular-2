@@ -65,6 +65,22 @@ export class HeroesService {
 
   }
 
+  deleteHeroe( key$: string ){
+
+    let headers = new Headers({
+      'Content-Type':'application-json'
+    });
+    let url = `${this.fireURL}/${key$}.json`;
+
+    return this.http.delete( url, {headers} ).pipe(
+      map( res => { 
+        console.log("delete", res.json());
+        return res.json();
+      } )
+    );
+
+  }
+
   getHeroes(){
 
     let headers = new Headers({
