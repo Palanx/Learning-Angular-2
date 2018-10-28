@@ -208,3 +208,8 @@ App que se conecta a una API CRUD Firebase
 + GET.
 + DELETE.
 + PUT.
+
+### Info:
+La diferencia entre **in** y **of** en un for es:
++ **IN** itera por cada nombre de la propiedad del enumerable de un objeto.
++ **OF** itera por cada propiedad del enumerable de un objeto.
