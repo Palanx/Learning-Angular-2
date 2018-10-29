@@ -213,3 +213,14 @@ App que se conecta a una API CRUD Firebase
 La diferencia entre **in** y **of** en un for es:
 + **IN** itera por cada nombre de la propiedad del enumerable de un objeto.
 + **OF** itera por cada propiedad del enumerable de un objeto.
+
+## 10. FireChat
+App que se usa la libreria oficial de Firebase para hacer un chat
+
+### Contenido:
++ Uso de AngularFire - Librería oficial de angular para conectarse a Firebase.
++ Crear observables para escuchar mediante sockets los cambios en Firebase.
++ Utilizaremos la autenticación de Google y Twitter para nuestro chat.
++ Uso de AngularFire para manejar las inserciones.
++ Uso de promesas para poder ejecutar funciones cuando detectamos cambios en la base de datos.
++ Usaremos el local storage para almacenar información del login para mantener las sesión.
